@@ -1,10 +1,1 @@
-import { UDFCompatibleDatafeedBase } from './udf-compatible-datafeed-base';
-import { QuotesProvider } from './quotes-provider';
-import { Requester } from './requester';
-export class UDFCompatibleDatafeed extends UDFCompatibleDatafeedBase {
-    constructor(datafeedURL, updateFrequency = 10 * 1000) {
-        const requester = new Requester();
-        const quotesProvider = new QuotesProvider(datafeedURL, requester);
-        super(datafeedURL, quotesProvider, requester, updateFrequency);
-    }
-}
+import{UDFCompatibleDatafeedBase}from"./udf-compatible-datafeed-base";import{QuotesProvider}from"./quotes-provider";import{Requester}from"./requester";export class UDFCompatibleDatafeed extends UDFCompatibleDatafeedBase{constructor(e,t=1e4){const o=new Requester;super(e,new QuotesProvider(e,o),o,t)}}
